@@ -169,3 +169,37 @@ def get_address_from_gps(gps_info, api_key, secret_key):
         address = transform_address_format(address)
     return address
 
+def gps_test():
+    """
+    Test GPS module.
+    :param None:
+    :return None:
+    """
+    import os
+    from common_utils import load_api_key
+    
+    api_key_dict = load_api_key(os.path.join("model", "key_file.txt"))
+    # check api key
+    for key in ("api_key", "secret_key"):
+        if (key not in api_key_dict.keys()) or ("{" in api_key_dict[key]):
+            print("You should save your api key in model/key_file.txt")
+            return
+    api_key = api_key_dict["api_key"]
+    secret_key = api_key_dict["secret_key"]
+    # invoke api
+    gps_info = dict()
+    try:
+        gps_info["GPSLatitude"] = 38.901859
+        gps_info["GPSLongitude"] = -77.026584
+        address = get_address_from_gps(gps_info, api_key, secret_key)
+        print(address)
+        gps_info["GPSLatitude"] = 39.989469
+        gps_info["GPSLongitude"] = 116.305961
+        address = get_address_from_gps(gps_info, api_key, secret_key)
+        print(address)
+    except Exception:
+        print("API invoking error, please check network connection or validation of API key.")
+        return
+
+if __name__ == "__main__":
+    gps_test()
