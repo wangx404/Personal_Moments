@@ -86,8 +86,6 @@ def build_image_link(src_image, dst_image, method="hardlink"):
         os.symlink(src_image, dst_image)
     elif method == "copy":
         shutil.copy(src_image, dst_image)
-    elif method == "move":
-        shutil.move(src_image, dst_image)
     else:
         raise ValueError
 
