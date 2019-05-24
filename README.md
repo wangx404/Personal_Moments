@@ -45,23 +45,39 @@ An offline script for sorting personal photos with similar functions of Google P
 经过脚本处理后，在输出文件夹中会按照以下结果出现若干文件夹，文件夹内存放的图片即对应属性的图片。
 
 输出文件夹的组织结构如下所示：
---output
-  --Date
-    --1970-01-01
+-output
+
+  -Date
+  
+    -1970-01-01
+    
     ...
-  --People
-    --Person_0001
+    
+  -People
+  
+    -Person_0001
+    
     ...
-  --Place
+    
+  -Place
+  
     --北京
-      --北京
-        --海淀
+    
+      -北京
+      
+        -海淀
     ...
-  --Thing
-    --Dog
-    --Cat
+    
+  -Thing
+  
+    -Dog
+    
+    -Cat
+    
     ...
-  --Week
+    
+  -Week
+  
     ...
 
 ## Results
