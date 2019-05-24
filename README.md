@@ -121,7 +121,9 @@ The structure of output directory is as below:
     
 ## 数据库结构
 数据库中包含了Summary，DateWeek，People，Place和Thing五张表，其结构分别如下所示：
+
 DateWeek:
+
 | 字段名 | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
 | :--: | :--: | :-: | :-: | :-: | :-: | :-: |
 | 字段属性 | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
@@ -131,6 +133,7 @@ DateWeek:
 There are five tables in database, which are Summary, DateWeek, People, Place and Thing. Their structures are listed below:
 
 DateWeek:
+
 | item | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
 | :--: | :--: | :-: | :-: | :-: | :-: | :-: |
 | item attribute | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
