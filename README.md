@@ -41,45 +41,96 @@ An offline script for sorting personal photos with similar functions of Google P
 2.  After processing image, an image hard link will be created in corresponding directory in default to reduce harddisk usage. Of course, you can choose other ways （copy or build symbolic link）.
 
 ## 实现结果
-
 经过脚本处理后，在输出文件夹中会按照以下结果出现若干文件夹，文件夹内存放的图片即对应属性的图片。
 
 输出文件夹的组织结构如下所示：
--output
+--output
 
-  -Date
+  --Date
   
-    -1970-01-01
+    --1970-01-01
     
     ...
     
-  -People
+  --People
   
-    -Person_0001
+    --Person_0001
     
     ...
     
-  -Place
+  --Place
   
     --北京
     
-      -北京
+      --北京
       
-        -海淀
+        --海淀
     ...
     
-  -Thing
+  --Thing
   
-    -Dog
+    --Dog
     
-    -Cat
+    --Cat
     
     ...
     
-  -Week
+  --Week
   
     ...
 
 ## Results
 After processing by this script, there are some new directories in output directory. Each directory contains related images.
 
+The structure of output directory is as below:
+
+--output
+
+  --Date
+  
+    --1970-01-01
+    
+    ...
+    
+  --People
+  
+    --Person_0001
+    
+    ...
+    
+  --Place
+  
+    --北京
+    
+      --北京
+      
+        --海淀
+    ...
+    
+  --Thing
+  
+    --Dog
+    
+    --Cat
+    
+    ...
+    
+  --Week
+  
+    ...
+    
+## 数据库结构
+数据库中包含了Summary，DateWeek，People，Place和Thing五张表，其结构分别如下所示：
+DateWeek:
+| 字段名 | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
+| :--: | :--: | :-: | :-: | :-: | :-: | :-: |
+| 字段属性 | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
+| 字段解释 | 图片名 | md5值 | 创建日期 | 具体名称 | 创建周 | 具体名称 |
+
+## Database Structure
+There are five tables in database, which are Summary, DateWeek, People, Place and Thing. Their structures are listed below:
+
+DateWeek:
+| item | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
+| :--: | :--: | :-: | :-: | :-: | :-: | :-: |
+| item attribute | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
