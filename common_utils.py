@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 15 16:20:09 2019
-@author: wangxin
+@author: wangx
 """
 
 import hashlib
