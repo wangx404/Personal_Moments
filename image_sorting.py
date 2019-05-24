@@ -59,13 +59,13 @@ def sort_images_by_date(input_dir, output_dir):
     dates = list(date_image_dict.keys())
     dates.sort()
     for date in dates: # process image file in for loop
-        # create directory under output_dir/Dates/
-        if not os.path.exists(os.path.join(output_dir, "Dates", date)):
-            os.makedirs(os.path.join(output_dir, "Dates", date))
-        # create directory under output_dir/Weeks/
+        # create directory under output_dir/Date/
+        if not os.path.exists(os.path.join(output_dir, "Date", date)):
+            os.makedirs(os.path.join(output_dir, "Date", date))
+        # create directory under output_dir/Week/
         week = date2week_date(date)
-        if not os.path.exists(os.path.join(output_dir, "Weeks", week)):
-            os.makedirs(os.path.join(output_dir, "Weeks", week))
+        if not os.path.exists(os.path.join(output_dir, "Week", week)):
+            os.makedirs(os.path.join(output_dir, "Week", week))
         
         # create image link in corresponding directory
         image_list = date_image_dict[date]
@@ -73,17 +73,17 @@ def sort_images_by_date(input_dir, output_dir):
             _, image_name = os.path.split(image_file)
             
             # check name, build image link, jump exception 
-            if os.path.exists(os.path.join(output_dir, "Dates", date, image_name)):
+            if os.path.exists(os.path.join(output_dir, "Date", date, image_name)):
                 image_name_date = random_rename(image_name)
             else:
                 image_name_date = image_name
-            if os.path.exists(os.path.join(output_dir, "Weeks", week, image_name)):
+            if os.path.exists(os.path.join(output_dir, "Week", week, image_name)):
                 image_name_week = random_rename(image_name)
             else:
                 image_name_week = image_name
             try:
-                build_image_link(image_file, os.path.join(output_dir, "Dates", date, image_name_date))
-                build_image_link(image_file, os.path.join(output_dir, "Weeks", week, image_name_week))
+                build_image_link(image_file, os.path.join(output_dir, "Date", date, image_name_date))
+                build_image_link(image_file, os.path.join(output_dir, "Week", week, image_name_week))
             except Exception:
                 print("Error happened when building image link of %s" % image_file)
                 continue
