@@ -137,3 +137,5 @@ DateWeek:
 | item | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
 | :--: | :--: | :-: | :-: | :-: | :-: | :-: |
 | item attribute | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
+
+## UI Building, almost done.
