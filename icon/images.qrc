@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>setting_0.png</file>
+    <file>setting_1.png</file>
+    <file>setting_2.png</file>
+    <file>setting_3.png</file>
+  </qresource>
+</RCC>
