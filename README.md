@@ -34,7 +34,7 @@ An offline script for sorting personal photos with similar functions of Google P
 
 ## UI功能
 
-![Date image]()
+![Date](/description/date.png)
 
 1. 日期分类
 1.1 同一天创建的图片位于同一目录中；双击某一日期的目录，即可查看该日期中的所有图片。
