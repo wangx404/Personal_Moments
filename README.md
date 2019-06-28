@@ -37,13 +37,47 @@ An offline script for sorting personal photos with similar functions of Google P
 ![Date](/description/date.png)
 
 1. 日期分类
+
 1.1 同一天创建的图片位于同一目录中；双击某一日期的目录，即可查看该日期中的所有图片。
+
 1.2 你也可以通过限定起始日期，搜索某一时间范围内的所有图片。
+
+！[Place](/description/place.png)
+
+2. 地点分类
+
+2.1 根据照片的定位信息，你可以浏览某一城市/区县的相关照片。
+
+2.2 如果你的照片遍布天南海北，你可以通过设定省份/城市/区县快速找到你想要的照片。
+
+![People0](/description/people_0.png)
+
+![People1](/description/people_1.png)
+
+![People2](/description/people_2.png)
+
+3. 人脸分类
+
+3.1 应用会根据图片中是否包含人脸以及人脸的可能归属对图片进行分类。
+
+3.2 你可以修改默认名称以便以后更方便的查找。
+
+3.3 你还可以通过更复杂的组合条件搜索照片。例如，你可以搜索同时包含了你以及你女朋友的照片。
 
 ## UI functions
 1. Date classification
+
 1.1 Images created/taken in the same day are sorted in the same folder. Double click one folder, you can see all the images of this day.
+
 1.2 If you want to browser images taken during a certain peroid of date, choose start date and end date above, and push search button. 
+
+2. Place classification
+
+2.1 Using the location (GPS) information stored in photoes, you can browser photoes of specific city or district.
+
+2.2 If you have travelled to so many cities that you cann't find your favourite one, don't worry. Search it by choosing province/city/district name listed in combo boxes.
+
+
 
 ## 实现细节
 1.  对照片进行处理后，所有的相关数据会被写入到本地的数据库文件中（默认为model文件夹下的info.db文件）。
