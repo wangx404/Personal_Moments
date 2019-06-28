@@ -1,2 +1,0 @@
-api_key:{your api key}
-secret_key:{your secrect key}
