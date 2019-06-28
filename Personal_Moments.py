@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Created on Fri Jun 28 14:34:43 2019
+@author: wangxin
+"""
 
 import sys, os, math
 import sqlite3
@@ -778,10 +782,10 @@ class ImportForm(QWidget, _ImportForm):
         启动图片处理线程。
         Start image processing threads.
         """
-        #self.date_process_thread.start() # no error
-        #self.place_process_thread.start() # no error
+        self.date_process_thread.start() # no error
+        self.place_process_thread.start() # no error
         self.people_process_thread.start()
-        #self.thing_process_thread.start() # not implemented
+        self.thing_process_thread.start() # not implemented
     
     # set value of progress bar
     def set_progress_pct(self, process_pct, thread_name):
