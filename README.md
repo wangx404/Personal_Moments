@@ -32,110 +32,38 @@ An offline script for sorting personal photos with similar functions of Google P
 - sort by people: invoke dlib's face detection and recognition model
 - sort by thing: calculate classification tags by DNN model
 
+## UI功能
+
+![Date image]()
+
+1. 日期分类
+1.1 同一天创建的图片位于同一目录中；双击某一日期的目录，即可查看该日期中的所有图片。
+1.2 你也可以通过限定起始日期，搜索某一时间范围内的所有图片。
+
+## UI functions
+1. Date classification
+1.1 Images created/taken in the same day are sorted in the same folder. Double click one folder, you can see all the images of this day.
+1.2 If you want to browser images taken during a certain peroid of date, choose start date and end date above, and push search button. 
+
 ## 实现细节
 1.  对照片进行处理后，所有的相关数据会被写入到本地的数据库文件中（默认为model文件夹下的info.db文件）。
-2.  对照片进行处理后，默认会在对应的文件夹中创建输入图片的硬链接（以减少磁盘空间占用），你也可以选用其他的方式（建立符号链接或者复制等）。
+2.  对照片进行处理后，默认会在对应的文件夹中创建输入图片的软链接（以减少磁盘空间占用），你也可以选用其他的方式（建立硬链接或者复制等）。
 
 ## Implementation Details
 1.  After processing image, all related information will be written into local database file (default: info.db file in model directory).
-2.  After processing image, an image hard link will be created in corresponding directory in default to reduce harddisk usage. Of course, you can choose other ways （copy or build symbolic link）.
+2.  After processing image, an image soft link will be created in corresponding directory in default to reduce harddisk usage. Of course, you can choose other ways （copy or build hard link）.
 
-## 实现结果
-经过脚本处理后，在输出文件夹中会按照以下结果出现若干文件夹，文件夹内存放的图片即对应属性的图片。
 
-输出文件夹的组织结构如下所示：
---output
 
-  --Date
-  
-    --1970-01-01
-    
-    ...
-    
-  --People
-  
-    --Person_0001
-    
-    ...
-    
-  --Place
-  
-    --北京
-    
-      --北京
-      
-        --海淀
-    ...
-    
-  --Thing
-  
-    --Dog
-    
-    --Cat
-    
-    ...
-    
-  --Week
-  
-    ...
-
-## Results
-After processing by this script, there are some new directories in output directory. Each directory contains related images.
-
-The structure of output directory is as below:
-
---output
-
-  --Date
-  
-    --1970-01-01
-    
-    ...
-    
-  --People
-  
-    --Person_0001
-    
-    ...
-    
-  --Place
-  
-    --北京
-    
-      --北京
-      
-        --海淀
-    ...
-    
-  --Thing
-  
-    --Dog
-    
-    --Cat
-    
-    ...
-    
-  --Week
-  
-    ...
+## 文件夹介绍
     
 ## 数据库结构
-数据库中包含了Summary，DateWeek，People，Place和Thing五张表，其结构分别如下所示：
 
-DateWeek:
+数据库中包含了Summary，Date，People，Place和Thing五张表，其结构分别如下所示：
+
+Summary:
 
 | 字段名 | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
 | :--: | :--: | :-: | :-: | :-: | :-: | :-: |
 | 字段属性 | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
 | 字段解释 | 图片名 | md5值 | 创建日期 | 具体名称 | 创建周 | 具体名称 |
-
-## Database Structure
-There are five tables in database, which are Summary, DateWeek, People, Place and Thing. Their structures are listed below:
-
-DateWeek:
-
-| item | image_file | md5 | create_date | image_name_date | create_week | image_name_week |
-| :--: | :--: | :-: | :-: | :-: | :-: | :-: |
-| item attribute | nvarchar | char(32) | date | nvarchar | char(22) | nvarchar |
-
-## UI Building, almost done.
