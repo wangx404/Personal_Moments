@@ -42,7 +42,7 @@ An offline script for sorting personal photos with similar functions of Google P
 
 1.2 你也可以通过限定起始日期，搜索某一时间范围内的所有图片。
 
-！[Place](/description/place.png)
+![Place](/description/place.png)
 
 2. 地点分类
 
@@ -63,6 +63,30 @@ An offline script for sorting personal photos with similar functions of Google P
 3.2 你可以修改默认名称以便以后更方便的查找。
 
 3.3 你还可以通过更复杂的组合条件搜索照片。例如，你可以搜索同时包含了你以及你女朋友的照片。
+
+3.4 双击图片可以查看大图。
+
+![Thing](/description/thing.png)
+
+4. 标签分类
+
+P.S. 此功能尚未实现
+
+![Search](/description/search.png)
+
+5. 多条件组合搜索
+
+![Import](/description/import.png)
+
+6. 图片导入
+
+![Setting](/description/setting.png)
+
+7. API设置
+
+![About](/description/about.png)
+
+8. 关于页面
 
 ## UI functions
 1. Date classification
