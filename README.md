@@ -38,9 +38,9 @@ An offline script for sorting personal photos with similar functions of Google P
 
 1. 日期分类
 
-1.1 同一天创建的图片位于同一目录中；双击某一日期的目录，即可查看该日期中的所有图片。
+  - 同一天创建的图片位于同一目录中；双击某一日期的目录，即可查看该日期中的所有图片。
 
-1.2 你也可以通过限定起始日期，搜索某一时间范围内的所有图片。
+  - 你也可以通过限定起始日期，搜索某一时间范围内的所有图片。
 
 ![Place](/description/place.png)
 
