@@ -1,10 +1,10 @@
 # 个人时光
 
-一个功能类似于谷歌相册的个人照片整理脚本。
+一个功能类似于谷歌相册的个人照片管理软件。
 
 # Personal_Moments
 
-An offline script for sorting personal photos with similar functions of Google Photo.
+An offline photo managing application for sorting personal photos with similar functions of Google Photo.
 
 ## 功能
 
@@ -173,6 +173,18 @@ If the UI is too ugly to you, you can also view image links built in `IMAGE` dir
 1.  After processing image, all related information will be written into local database file (default: info.db file in record directory).
 
 2.  After processing image, an image soft link will be created in corresponding directory in default to reduce harddisk usage. Of course, you can choose other ways （copy or build hard link）.
+
+## 包依赖
+
+- Numpy
+- PIL
+- PyQt5
+
+## Package Dependency
+
+- Numpy
+- PIL
+- PyQt5
 
 ## 功能规划
 
