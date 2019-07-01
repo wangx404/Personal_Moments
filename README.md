@@ -160,6 +160,8 @@ P.S. This function has not been implemented yet.
 
 You can enjoy using it by running command `python Personal_Moments.py` after installing required packages.
 
+If the UI is too ugly to you, you can also view image links built in `IMAGE` directory.
+
 ## 实现细节
 
 1.  对照片进行处理后，所有的相关数据会被写入到本地的数据库文件中（默认record文件夹下的info.db文件）。
